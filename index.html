@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="th=device-width, initial-scale=1.0">
+    <title>Phones Map</title>
+    <!-- bootstrap css cdn link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- externel css link  -->
+    <link rel="stylesheet" href="style.css">
+    <script src="chrome-extension://fbekjliiclfhdoldplapoaendbmnaglj/js/init-cursor.js"></script>
+    <link id="avast_os_ext_custom_font"
+        href="chrome-extension://mbckjcfnjmoiinpgddefodcighgikkgn/common/ui/fonts/fonts.css" rel="stylesheet"
+        type="text/css">
+    <style id="arebe7a5c3adstyle">
+        .arebe7a5c3adhidden {
+            position: absolute !important;
+            opacity: 0 !important;
+            pointer-events: none !important
+        }
+    </style>
+</head>
+
+<body class="cursor-hover">
+    <!-- individual phone display section  -->
+    <section id="display-section" style="display: none;">
+        <div id="display-container" class="w-75 h-75 bg-white shadow-lg rounded-3 p-3">
+        </div>
+    </section>
+    <!-- section for spinner  -->
+    <section id="spinner-container" style="display: none;">
+        <div id="spinner" class="cursor-hover"></div>
+    </section>
+    <!-- header starts  -->
+    <header class="pt-5 cursor-hover">
+        <!-- webpage title  -->
+        <h1 class="text-secondary text-center cursor-hover"><span class="text-secondary"></span><span
+                class="text-secondary">Search</span>
+            Your <span class="text-secondary">Desire</span> Phone</h1>
+        <!-- search field and search button section -->
+        <section class="w-50 mx-auto mb-5">
+            <div class="input-group mb-3 rounded-3">
+                <input id="search-field" type="text" class="form-control border border-secondary"
+                    placeholder="Search Phone" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button onclick="loadPhones()" class="search-btn" type="but3n" id="button-addon2">Search</button>
+            </div>
+        </section>
+    </header>
+
+    <main class="container">
+        <!-- giving an error message -->
+        <section>
+            <h3 id="error-message" class="text-center text-warning" style="display: none;">Please, Give a valid Phone
+                Name</h3>
+            <!-- search results section -->
+            <div id="search-results" class="row row-cols-1 row-cols-md-3 g-4">
+            </div>
+            <p id="see-all" class="text-end" style="display: none;"><button onclick="seeAll()"
+                    class="btn btn-warning text-white">See All</button>
+            </p>
+        </section>
+    </main>
+    <!-- scripts link  -->
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
